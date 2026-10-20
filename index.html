@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Productivity Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main class="container">
+  <header><p class="eyebrow">YOUR DAILY DASHBOARD</p><h1>Daily Productivity Tracker</h1><p>Track habits, see your score, and build a better week.</p></header>
+  <section class="stats" aria-label="Summary">
+    <div class="stat"><span>Latest score</span><strong id="latestScore">—</strong></div>
+    <div class="stat"><span>7-day average</span><strong id="weeklyAverage">—</strong></div>
+    <div class="stat"><span>Days logged</span><strong id="daysLogged">0</strong></div>
+  </section>
+  <section class="panel">
+    <h2>Log your day</h2>
+    <form id="entryForm" novalidate>
+      <div class="fields">
+        <label>Date<input type="date" id="date" required></label>
+        <label>Study hours<input type="number" id="study" min="0" max="24" step="0.5" placeholder="e.g. 4" required></label>
+        <label>Sleep hours<input type="number" id="sleep" min="0" max="24" step="0.5" placeholder="e.g. 8" required></label>
+        <label>Exercise minutes<input type="number" id="exercise" min="0" max="1440" step="1" placeholder="e.g. 30" required></label>
+        <label>Recreational screen hours<input type="number" id="screen" min="0" max="24" step="0.5" placeholder="e.g. 2" required></label>
+      </div>
+      <p id="error" class="error" role="alert" aria-live="polite"></p>
+      <button type="submit">Save day & calculate score</button>
+    </form>
+    <p class="hint">Scoring: study up to 40 points (4 hours), sleep up to 25 (8 hours), exercise up to 25 (30 minutes), and screen-time habits up to 10 (2 hours or less). This is a motivational score, not a scientific measure.</p>
+  </section>
+  <section class="panel">
+    <div class="section-head"><h2>Your last 7 days</h2><button id="reset" class="secondary" type="button">Reset all</button></div>
+    <div id="chart" class="chart" aria-label="Productivity scores for the last seven days"></div>
+  </section>
+  <section class="panel">
+    <div class="section-head"><h2>History</h2><label class="sort-label">Sort <select id="sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="highest">Highest score</option></select></label></div>
+    <div id="history"></div>
+  </section>
+</main>
+</body>
+</html>
