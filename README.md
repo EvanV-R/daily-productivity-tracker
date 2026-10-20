@@ -9,10 +9,10 @@ Open the [live site](https://evanv-r.github.io/daily-productivity-tracker/). Ent
 A dated list of habit entries and scores in localStorage. The latest score, 7-day average, chart, and history are derived from those entries.
 
 ## Agent versus expectations
-**Complete this yourself:** One specific place where the generated app differed from what you expected.
+The first version of my project had the correct files, but the HTML, CSS, and JavaScript files were empty. I expected the website to already contain working code. I realized something was wrong when I opened script.js in VS Code and saw that it had no code. I replaced the empty files with the completed code and tested the website in my browser.
 
 ## Required AI review question
-**Complete this yourself with a real commit reference:** Identify one AI-generated output you changed, what you changed, why, and the commit that shows it. If the first output was acceptable, explain how you verified it.
+One AI-generated output I did not accept was the initial project files because they contained no working code. I checked this by opening script.js in VS Code and seeing that it was empty. I corrected the issue by replacing the files with the actual HTML, CSS, and JavaScript code. I then tested the website by entering daily habits, checking that it calculated a productivity score, and confirming that the page worked in my browser. The corrected code is shown now in the "Build daily productivity tracker website."
 
 ## Notes
 This project uses plain HTML, CSS, and JavaScript, with no external services.
